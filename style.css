@@ -21,14 +21,14 @@ body {
   background-color: var(--bg-color);
   color: var(--text-color);
   scroll-behavior: smooth;
-  width: 100%;
+  max-width: 100%;
   overflow-x: hidden;
 }
 header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 100%;
+  max-width: 100%;
   padding: 10px 20px;
 }
 header .logo {
@@ -254,7 +254,7 @@ section.about .about-kotak .about-dua p {
 /* services */
 .services {
   min-height: 100vh;
-  width: 95%;
+  max-width: 95%;
   margin: auto;
   margin-top: 80px;
   margin-top: 50px;
@@ -280,7 +280,7 @@ section.about .about-kotak .about-dua p {
   margin-top: 30px;
 }
 .services-kotak .item-services {
-  width: 90%;
+  max-width: 90%;
   max-width: 100%;
   /* height: 100%; */
   background-color: rgba(110, 130, 151, 0.404);
@@ -354,7 +354,7 @@ section.about .about-kotak .about-dua p {
   overflow: hidden;
 }
 .forto-kotak .kotak-1 .gambar {
-  width: 100%;
+  max-width: 100%;
   height: 100%;
 }
 .forto-kotak .kotak-1 .gambar img {
@@ -558,8 +558,9 @@ textarea {
     top: 50px;
     right: -250px;
     height: 50vh;
+    width: 70%;
     background-color: var(--text-color);
-    width: 250px;
+    max-width: 250px;
     border-radius: 10px;
     transition: 0.5s;
     z-index: 4;
@@ -723,9 +724,31 @@ textarea {
   .home-icon a {
     margin: 0 10px;
   }
+  .info-box {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px 0;
+  }
+  .info-box .lom-info {
+    margin-top: -15px;
+  }
+
+  .box-btn {
+    max-width: 100%;
+    margin-top: 65px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .box-btn .btn:nth-child(2) {
+    margin-left: -15px;
+  }
+
   .box-btn .btn {
     padding: 7px 8px;
     font-size: 13px;
+  }
+  .about {
+    margin-top: 80px;
   }
   .about .about-dua {
     width: 100%;
@@ -767,7 +790,7 @@ textarea {
     font-size: 23px;
   }
   .cp-icon i {
-    font-size: 14px;
+    font-size: 12px;
   }
   .cp-icon {
     gap: 10px;
@@ -776,5 +799,21 @@ textarea {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     margin-left: 20px;
+  }
+  /* fortofolio */
+  .forto-kotak .kotak-1 {
+    width: 100%;
+    max-width: 340px; /* tetap ada batas maksimal */
+    height: 400px; /* biar tinggi ikut isi */
+    margin: 20px auto; /* tengah */
+    position: relative;
+    overflow: hidden;
+  }
+}
+
+@media (max-width: 400px) {
+  .forto-kotak .kotak-1 {
+    max-width: 90%;
+    height: 380px;
   }
 }
