@@ -1,6 +1,6 @@
 const kotak = document.querySelector(".navlist");
 function hidemenu() {
-  kotak.style.right = "-100%";
+  kotak.style.right = "-250px";
 }
 function sidemenu() {
   kotak.style.right = "0";
